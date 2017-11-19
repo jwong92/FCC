@@ -9,7 +9,7 @@ if(navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
     x = position.coords.latitude;
     y = position.coords.longitude;
-    key = "1483de70e0e498a23a2af380c0e3f85f";
+    var key = "1483de70e0e498a23a2af380c0e3f85f";
 
       $.ajax ({
         url: "http://api.openweathermap.org/data/2.5/weather?lat="+x+"&lon="+y+"&APPID="+key,
@@ -24,17 +24,35 @@ if(navigator.geolocation) {
           var img_src_ext = icon_src+icon_ext+".png";
 
           $("#city").unbind().append(response.name);
-          $("#temperature").html(Math.round(response.main.temp) + "&deg;" + "C");
+          $("#temperature").html(Math.round(response.main.temp) + "&deg;C");
           $("#description").text(response.weather[0].description);
           $("#icon").attr("src", img_src_ext);
           $(".container").css("display", "block");
+
+          $("#fahrenheit").click(function(){
+            ctof();
+          });
+
+            //conversion of celscius to fahrenheit
+          function ctof() {
+            var c_temp = response.main.temp;
+            $("#temperature").html(Math.round(c_temp*(9/5)+32) + "&deg;F" );
+          }
+
+          //conversion of fahrenheit to celscius
+          function ftoc(){
+            $("#temperature").html(Math.round(response.main.temp) + "&deg;C");
+          }
+
+
         }
-      });
-  });
-}
+      })
+    })
+  }
 else {
   alert("Geolocation Not Supported");
 }
+});
 
 //You can't run a local file in google chrome, so you either need to add http:// at the beginning, run it on a local host, or render it as a jsonp file.
 
@@ -57,5 +75,3 @@ else {
 // }
 //
 // showTheWeather();
-
-});
