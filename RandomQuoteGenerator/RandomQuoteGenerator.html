@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="RandomQuoteGenerator" />
+  <title>Random Quote Generator</title>
+  <link rel="stylesheet" type="text/css" href="RandomQuoteGenerator.css" />
+  <!-- your jQuery must be loaded before your javascript file. Anything that relies on jQuery must be loaded first -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script rel="stylesheet" type="text/javascript" src="RandomQuoteGenerator.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+<div class="page-wrapper">
+  <main id="main">
+    <div id="text-area">
+      <article id="quote-container">
+        <div class="quote-icon">
+          <i class="fa fa-quote-left fa-4x" id="quote-left" aria-hidden="true"></i>
+          <i class="fa fa-quote-right fa-4x" id="quote-right" aria-hidden="true"></i>
+        </div>
+        <div class="quote-author">
+          <h1 id="quote"></h1>
+          <p id="author">-</p>
+        </div>
+      </article>
+      <section id="button-social-media">
+        <div class="col-50">
+          <a class="media-buttons" href="https://www.twitter.com"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+          <a class="media-buttons" href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </div>
+        <div class="col-50">
+          <label for="new-quote" class="hidden">Submit</label>
+          <button class="buttons" name="new-quote" type="button" target="_blank">New Quote</button>
+        </div>
+    </section>
+    </div>
+  </main>
+</div>
+</body>
+
+</html>
