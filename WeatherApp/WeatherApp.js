@@ -24,11 +24,10 @@ if(navigator.geolocation) {
           var img_src_ext = icon_src+icon_ext+".png";
 
           $("#city").unbind().append(response.name);
-          $("#temperature").html(response.main.temp + "&deg;" + "C");
+          $("#temperature").html(Math.round(response.main.temp) + "&deg;" + "C");
           $("#description").text(response.weather[0].description);
           $("#icon").attr("src", img_src_ext);
-
-          console.log(response);
+          $(".container").css("display", "block");
         }
       });
   });
