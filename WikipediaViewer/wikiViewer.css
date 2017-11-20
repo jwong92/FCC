@@ -1,0 +1,49 @@
+/************
+Default
+Use Everywhre
+Header
+Main
+
+*************/
+
+/*Default*/
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FFF;
+  background-color: #730611;
+}
+
+/*Header*/
+
+#main-title {
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/*Main*/
+#main {
+  text-align: center;
+  font-size: 1rem;
+}
+
+/*Allows me to center vertically*/
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
