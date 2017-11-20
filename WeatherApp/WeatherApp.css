@@ -2,6 +2,7 @@
 1. Default Values
 2. Header
 3. Main
+4. Button
 **************/
 
 /*Default Values*/
@@ -57,4 +58,10 @@ body {
 
 #temperature {
   font-size: 2rem;
+}
+
+/*Button*/
+#convert {
+  border: none;
+  font-size: 1rem;
 }
