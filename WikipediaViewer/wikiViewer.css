@@ -37,13 +37,35 @@ body {
   font-size: 1rem;
 }
 
-/*Allows me to center vertically*/
 .container {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 90%;
   width: 100%;
   position: absolute;
   justify-content: center;
   align-items: center;
+} /*Allows me to center vertically*/
+
+.descriptions {
+  margin: 0;
+}
+
+/*icon*/
+.fa {
+  padding: 1em;
+}
+
+/*search box*/
+#search-box{
+  display: none;
+}
+
+#search {
+  border: 5px solid black;
+  border-radius: 0.5em;
+  background-color: transparent;
+  font-size: 1.5em;
+  color: #FFF;
+  padding: 0.5em;
 }
